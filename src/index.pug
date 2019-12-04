@@ -1,0 +1,81 @@
+header
+	h1#title Survey Form
+main
+	p#description Let us know how we can improve freeCodeCamp
+	form(formaction="#", method="GET", role="form", id="survey-form")
+		.question
+			label.main(for="name", id="name-label") * Name:
+			input.right(type="text", id="name", name="user_name", placeholder="Enter your name", autofocus, required)
+		.question
+			label.main(for="email", id="email-label") * Email:
+			input.right(type="email", id="email", name="user_email" placeholder="Enter your email"  autofocus required)
+		.question
+			label.main(for="number", id="number-label") * Age:
+			input.right(type="number", id="number", name="user_age", placeholder="Age", min="0", max="100", autofocus )
+		.question
+			label.main(for="job") Which option best describes your current role?
+			select.right(id="job", name="user_job")
+				option(value="student") Student
+				option(value="full_time_job") Full Time Job
+				option(value="full_time_learner") Full Time Learner
+				option(value="anon") Prefer not to say
+				option(value="other") Other
+		.question
+			label.main * How likely is that you would recommend freeCodeCamp to a friend?
+			.right
+				.group
+					input(type="radio", id="yes", value="Definitely" name="like")
+					label(for="yes") Definitely
+				.group
+					input(type="radio", id="maybe", value="Definitely" name="like" )
+					label(for="maybe") Maybe
+				.group
+					input(type="radio", id="idk", value="Not Sure" name="like" )
+					label(for="idk") Not Sure
+		.question
+			label.main(for="dropdown") What do you like most in FCC:  
+			select.right(id="dropdown", name="user_favorite")
+				option(value="challenge") Challenges
+				option(value="project") Projects
+				option(value="community") Community
+				option(value="open_source") Open Source
+		.question#checkbox
+			label.main(for="help") Things that should be improved in the future (Check all that apply): 
+			.right
+				.group
+					input(type="checkbox", id="front_end", value="interest_front_end" name="user_interest")
+					label(for="yes") Front-end Projects
+				.group
+					input(type="checkbox", id="back_end", value="interest_back_end" name="user_interest")
+					label(for="back_end") Back-end Projects
+				.group
+					input(type="checkbox", id="datav", value="interest_datav" name="user_interest")
+					label(for="datav") Data Visualization
+				.group
+					input(type="checkbox", id="interest_challenge", value="interest_challenge" name="user_interest")
+					label(for="interest_challenge") Challenges
+				.group
+					input(type="checkbox", id="open_source_comm", value="interest_open_source" name="user_interest")
+					label(for="open_source_comm") Open Source Community
+				.group
+					input(type="checkbox", id="gitter", value="interest_gitter" name="user_interest")
+					label(for="gitter") Gitter help rooms
+				.group
+					input(type="checkbox", id="video", value="interest_video" name="user_interest")
+					label(for="videp") Videos
+				.group
+					input(type="checkbox", id="meetup", value="interest_meetup" name="user_interest")
+					label(for="meetup") City Meetups
+				.group
+					input(type="checkbox", id="front_end", value="interest_wiki" name="user_interest")
+					label(for="wiki") Wiki
+				.group
+					input(type="checkbox", id="forum", value="interest_forum" name="user_interest")
+					label(for="forum") Forum
+				.group
+					input(type="checkbox", id="additional", value="interest_additional" name="user_interest")
+					label(for="additional") Additional Courses
+		.question
+			label.main(for="comments") Any Comments or Suggestions?
+			<textarea id="comments" placeholder="Enter your comment here..."></textarea>
+		button.btn.btn-primary(id="submit" type="submit") Submit

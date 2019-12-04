@@ -1,0 +1,260 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css)
+
+@import url('https://fonts.googleapis.com/css?family=Barrio|Lato:400,900|Open+Sans')
+
+@import url('https://fonts.googleapis.com/css?family=Barrio')
+
+$temp: orange
+
+$dark: #8A2C66
+$deep: #1EB090
+$main: #FAEBD7
+$pdow: saturate(darken($dark, 14), 9)
+$riptide: #6BE3C9
+$bright: #ff9fa8
+
+html, body
+	background: radial-gradient(circle, $bright 20%, $dark)
+	height: 100%
+	width: 100%
+	font: 1em 'Lato'
+	color: #222
+	font-family: 'Open Sans', Arial, sans-serif
+
+header, p#description
+	text-align: center
+
+header, main
+	margin: 2em auto
+	width: 75%
+	max-width: 980px
+
+#title
+	font: bold 4em "Barrio"
+
+main
+	background: rgba(250, 250, 250, 0.7)
+	border-radius: 5px
+	padding: 1.5em
+
+form
+	width: 85%
+	margin: 0 auto
+
+.right
+	display: inline-block
+	text-align: left
+
+#description
+	padding: 0 0 0.7em
+
+
+.question
+	display: block
+	margin: 15px auto
+	select
+		width: 9em
+	label
+		display: inline-block
+		vertical-align: top
+		text-align: right
+		margin-right: 10px
+		&.main
+			position: relative
+			width: 44%
+
+input[type="text"], input[type="email"], input[type="number"], textarea
+	width: 15em
+	&::placeholder
+		font-size: 0.85em
+		line-height: 1.5em
+		text-indent: 5px
+		
+/************ Button Styling *******/
+.btn
+	display: block
+	padding: 6px 12px
+	text-align: center
+	margin: 15px auto
+	font-size: 14px
+	font-weight: normal
+	line-height: 1.42857143
+	text-align: center
+	white-space: nowrap
+	vertical-align: middle
+	cursor: pointer
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	background-image: none
+	border: 1px solid transparent
+	border-radius: 4px
+	&:focus, &:active:focus, &.active:focus
+		outline: thin dotted
+		outline: 5px auto -webkit-focus-ring-color
+		outline-offset: -2px
+	&:hover, &:focus
+		color: #333
+		text-decoration: none
+	&:active, &.active
+		background-image: none
+		outline: 0
+		-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+		box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+	&.disabled, &[disabled]
+		pointer-events: none
+		cursor: not-allowed
+		filter: alpha(opacity = 65)
+		-webkit-box-shadow: none
+		box-shadow: none
+		opacity: .65
+
+fieldset[disabled] .btn
+	pointer-events: none
+	cursor: not-allowed
+	filter: alpha(opacity = 65)
+	-webkit-box-shadow: none
+	box-shadow: none
+	opacity: .65
+	
+.btn-primary
+	color: #fff
+	background-color: #428bca
+	border-color: #357ebd
+	&:hover, &:focus, &:active, &.active
+		color: #fff
+		background-color: #3276b1
+		border-color: #285e8e
+
+.open .dropdown-toggle.btn-primary
+	color: #fff
+	background-color: #3276b1
+	border-color: #285e8e
+
+.btn-primary
+	&:active, &.active
+		background-image: none
+
+.open .dropdown-toggle.btn-primary
+	background-image: none
+
+.btn-primary
+	&.disabled, &[disabled]
+		background-color: #428bca
+		border-color: #357ebd
+
+fieldset[disabled] .btn-primary
+	background-color: #428bca
+	border-color: #357ebd
+
+.btn-primary
+	&.disabled:hover, &[disabled]:hover
+		background-color: #428bca
+		border-color: #357ebd
+
+fieldset[disabled] .btn-primary:hover
+	background-color: #428bca
+	border-color: #357ebd
+
+.btn-primary
+	&.disabled:focus, &[disabled]:focus
+		background-color: #428bca
+		border-color: #357ebd
+
+fieldset[disabled] .btn-primary:focus
+	background-color: #428bca
+	border-color: #357ebd
+
+.btn-primary
+	&.disabled:active, &[disabled]:active
+		background-color: #428bca
+		border-color: #357ebd
+
+fieldset[disabled] .btn-primary:active
+	background-color: #428bca
+	border-color: #357ebd
+
+.btn-primary
+	&.disabled.active, &[disabled].active
+		background-color: #428bca
+		border-color: #357ebd
+
+fieldset[disabled] .btn-primary.active
+	background-color: #428bca
+	border-color: #357ebd
+
+.btn-primary .badge
+	color: #428bca
+	background-color: #fff
+
+.btn-success
+	color: #fff
+	background-color: #5cb85c
+	border-color: #4cae4c
+	&:hover, &:focus, &:active, &.active
+		color: #fff
+		background-color: #47a447
+		border-color: #398439
+
+.open .dropdown-toggle.btn-success
+	color: #fff
+	background-color: #47a447
+	border-color: #398439
+
+.btn-success
+	&:active, &.active
+		background-image: none
+
+.open .dropdown-toggle.btn-success
+	background-image: none
+
+.btn-success
+	&.disabled, &[disabled]
+		background-color: #5cb85c
+		border-color: #4cae4c
+
+fieldset[disabled] .btn-success
+	background-color: #5cb85c
+	border-color: #4cae4c
+
+.btn-success
+	&.disabled:hover, &[disabled]:hover
+		background-color: #5cb85c
+		border-color: #4cae4c
+
+fieldset[disabled] .btn-success:hover
+	background-color: #5cb85c
+	border-color: #4cae4c
+
+.btn-success
+	&.disabled:focus, &[disabled]:focus
+		background-color: #5cb85c
+		border-color: #4cae4c
+
+fieldset[disabled] .btn-success:focus
+	background-color: #5cb85c
+	border-color: #4cae4c
+
+.btn-success
+	&.disabled:active, &[disabled]:active
+		background-color: #5cb85c
+		border-color: #4cae4c
+
+fieldset[disabled] .btn-success:active
+	background-color: #5cb85c
+	border-color: #4cae4c
+
+.btn-success
+	&.disabled.active, &[disabled].active
+		background-color: #5cb85c
+		border-color: #4cae4c
+
+fieldset[disabled] .btn-success.active
+	background-color: #5cb85c
+	border-color: #4cae4c
+
+.btn-success .badge
+	color: #5cb85c
+	background-color: #fff
+

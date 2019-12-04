@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<header>
+  <h1 id="title">Survey Form</h1>
+</header>
+<main>
+  <p id="description">Let us know how we can improve freeCodeCamp</p>
+  <form formaction="#" method="GET" role="form" id="survey-form">
+    <div class="question">
+      <label class="main" for="name" id="name-label">* Name:</label>
+      <input class="right" type="text" id="name" name="user_name" placeholder="Enter your name" autofocus="autofocus" required="required"/>
+    </div>
+    <div class="question">
+      <label class="main" for="email" id="email-label">* Email:</label>
+      <input class="right" type="email" id="email" name="user_email" placeholder="Enter your email" autofocus="autofocus" required="required"/>
+    </div>
+    <div class="question">
+      <label class="main" for="number" id="number-label">* Age:</label>
+      <input class="right" type="number" id="number" name="user_age" placeholder="Age" min="0" max="100" autofocus="autofocus"/>
+    </div>
+    <div class="question">
+      <label class="main" for="job">Which option best describes your current role?</label>
+      <select class="right" id="job" name="user_job">
+        <option value="student">Student</option>
+        <option value="full_time_job">Full Time Job</option>
+        <option value="full_time_learner">Full Time Learner</option>
+        <option value="anon">Prefer not to say</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="question">
+      <label class="main">* How likely is that you would recommend freeCodeCamp to a friend?</label>
+      <div class="right">
+        <div class="group">
+          <input type="radio" id="yes" value="Definitely" name="like"/>
+          <label for="yes">Definitely</label>
+        </div>
+        <div class="group">
+          <input type="radio" id="maybe" value="Definitely" name="like"/>
+          <label for="maybe">Maybe</label>
+        </div>
+        <div class="group">
+          <input type="radio" id="idk" value="Not Sure" name="like"/>
+          <label for="idk">Not Sure</label>
+        </div>
+      </div>
+    </div>
+    <div class="question">
+      <label class="main" for="dropdown">What do you like most in FCC:  </label>
+      <select class="right" id="dropdown" name="user_favorite">
+        <option value="challenge">Challenges</option>
+        <option value="project">Projects</option>
+        <option value="community">Community</option>
+        <option value="open_source">Open Source</option>
+      </select>
+    </div>
+    <div class="question" id="checkbox">
+      <label class="main" for="help">Things that should be improved in the future (Check all that apply): </label>
+      <div class="right">
+        <div class="group">
+          <input type="checkbox" id="front_end" value="interest_front_end" name="user_interest"/>
+          <label for="yes">Front-end Projects</label>
+        </div>
+        <div class="group">
+          <input type="checkbox" id="back_end" value="interest_back_end" name="user_interest"/>
+          <label for="back_end">Back-end Projects</label>
+        </div>
+        <div class="group">
+          <input type="checkbox" id="datav" value="interest_datav" name="user_interest"/>
+          <label for="datav">Data Visualization</label>
+        </div>
+        <div class="group">
+          <input type="checkbox" id="interest_challenge" value="interest_challenge" name="user_interest"/>
+          <label for="interest_challenge">Challenges</label>
+        </div>
+        <div class="group">
+          <input type="checkbox" id="open_source_comm" value="interest_open_source" name="user_interest"/>
+          <label for="open_source_comm">Open Source Community</label>
+        </div>
+        <div class="group">
+          <input type="checkbox" id="gitter" value="interest_gitter" name="user_interest"/>
+          <label for="gitter">Gitter help rooms</label>
+        </div>
+        <div class="group">
+          <input type="checkbox" id="video" value="interest_video" name="user_interest"/>
+          <label for="videp">Videos</label>
+        </div>
+        <div class="group">
+          <input type="checkbox" id="meetup" value="interest_meetup" name="user_interest"/>
+          <label for="meetup">City Meetups</label>
+        </div>
+        <div class="group">
+          <input type="checkbox" id="front_end" value="interest_wiki" name="user_interest"/>
+          <label for="wiki">Wiki</label>
+        </div>
+        <div class="group">
+          <input type="checkbox" id="forum" value="interest_forum" name="user_interest"/>
+          <label for="forum">Forum</label>
+        </div>
+        <div class="group">
+          <input type="checkbox" id="additional" value="interest_additional" name="user_interest"/>
+          <label for="additional">Additional Courses</label>
+        </div>
+      </div>
+    </div>
+    <div class="question">
+      <label class="main" for="comments">Any Comments or Suggestions?</label><textarea id="comments" placeholder="Enter your comment here..."></textarea>
+    </div>
+    <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+  </form>
+</main>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
